@@ -351,6 +351,18 @@ footer a {
     background-color: #e3e5e7;
 }
 
+@media screen and (max-width: 1024px) {
+    .search-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-details {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+}
+
 @keyframes intro {
     0% {
         transform: translateY(-10%);
