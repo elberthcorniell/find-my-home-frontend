@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/58ae6287d2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Search | Find My Home</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h1>Find My Home</h1>
+        </div>
+        <ul>
+            <li>Homes</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>More <i class="fas fa-angle-double-right"></i> </li>
+        </ul>
+    </nav>
+    
+    <header>
+        <div>
+            <div class="big-banner">
+                <h1>Results</h1>
+            </div>
+            <div></div>
+        </div>
+        <div class="search-box">
+            <form action="./search.html" method="GET">
+                <div>
+                    <label for="location">
+                        <h1>Location</h1>
+                    </label>
+                    <input type="text" id="location" name="location" required />
+                </div>
+                <div>
+                    <label for="rooms">
+                        <h1>Rooms</h1>
+                    </label>
+                    <input type="number" value="3"  id="rooms" name="rooms" required/>
+                </div>
+                <div>
+                    <label for="baths">
+                        <h1>Baths</h1>
+                    </label>
+                    <input type="number" value="2"  id="baths" name="baths" required/>
+                </div>
+                <div>
+                    <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <h1 id="title"></h1>
+    <script>
+        let url_string = window.location.href;
+        let url = new URL(url_string);
+        let l = url.searchParams.get("location");
+        let r = url.searchParams.get("rooms");
+        let b = url.searchParams.get("baths");
+        let element = document.getElementById("title")
+        element.innerText = `Homes ${l ? "at " + l : ""} ${ b || r ? 'with' : ''} ${r ? r + ' rooms' : ''}  ${b ? `${r? 'and': ''} ${b} baths` : ''}`
+    </script>
+</body>
+
+</html>
