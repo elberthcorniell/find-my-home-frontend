@@ -27,6 +27,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 999;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
 
 nav:hover {
@@ -53,6 +55,10 @@ nav ul li:last-child {
 
 nav i {
     margin: 0 5px;
+}
+
+nav .burger {
+    display: none;
 }
 
 header > div:first-child {
@@ -82,12 +88,12 @@ header > div:first-child > div:last-child img {
 }
 
 .search-box {
-    width: 100%;
+    width: calc(100vw - 40px);
     max-width: 600px;
     height: fit-content;
     margin: auto;
     background-color: white;
-    transform: translateY(-50%);
+    transform: translateY(-80px);
     border-radius: 5px;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.07);
     padding: 20px;
@@ -175,7 +181,6 @@ section {
 }
 
 .grid2-2 i {
-    /* position: absolute; */
     top: 30px;
     right: 30px;
     background-color: #e3e5e7;
@@ -296,11 +301,10 @@ footer > div:first-child {
     border-radius: 5px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    height: 350px;
 }
 
 .search-section a {
-    position: absolute;
+    /* position: absolute; */
     bottom: 20px;
     transform: translateX(-50%);
 }
@@ -352,6 +356,7 @@ footer a {
 }
 
 @media screen and (max-width: 1024px) {
+
     .search-section {
         grid-template-columns: 1fr 1fr;
     }
@@ -363,12 +368,63 @@ footer a {
 
 }
 
+@media screen and (max-width: 768px) {
+    .grid2-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .features > div {
+        grid-template-columns: 1fr;
+    }
+
+    .features > div:nth-child(2n) {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .search-box > form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box > form input {
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header > div:first-child {
+        grid-template-columns: 1fr;
+    }
+
+    header > div:first-child > div:first-child {
+        padding: 40px;
+    }
+
+    .search-section {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    nav .burger {
+        display: block;
+    }
+
+}
+
 @keyframes intro {
     0% {
-        transform: translateY(-10%);
+        transform: translateY(-10px);
     }
     
     100% {
-        transform: translateY(-50%);
+        transform: translateY(-80px);
     }
 }
