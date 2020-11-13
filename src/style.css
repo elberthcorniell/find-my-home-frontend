@@ -14,6 +14,10 @@ i {
     color: inherit;
 }
 
+a {
+    text-decoration: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -61,6 +65,11 @@ header > div:first-child > div:last-child {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+}
+
+header > div:first-child > div:last-child img {
+    width: 100%;
 }
 
 .big-banner {
@@ -201,7 +210,7 @@ section {
     width: calc(100% - 80px);
 }
 
-.features button {
+section button {
     background-color: #333;
     color: white;
     border: none;
@@ -269,6 +278,77 @@ footer > div:first-child {
 
 .subscribe input {
     background-color: white;
+}
+
+.search-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.search-section > div {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 350px;
+}
+
+.search-section a {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.search-section img {
+    width: 100%;
+}
+
+.img-container {
+    height: 130px;
+    width: 100%;
+    overflow-y: hidden;
+    border-radius: 5px;
+}
+
+.search-section ul {
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+}
+
+.home-details {
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    max-width: 1000px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: auto;
+    transform: translateY(-120px);
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+}
+
+.home-details > div:last-child {
+    padding: 40px;
+}
+
+.home-details img {
+    width: 100%;
+}
+
+.subscribe.gray input{
+    background-color: #e3e5e7;
 }
 
 @keyframes intro {

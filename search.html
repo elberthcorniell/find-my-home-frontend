@@ -16,16 +16,18 @@
 <body>
     <nav>
         <div>
-            <h1>Find My Home</h1>
+            <a href="./index.html">
+                <h1>Find My Home</h1>
+            </a>
         </div>
         <ul>
-            <li>Homes</li>
+            <li><a href="./index.html">Home</a></li>
             <li>About</li>
             <li>Blog</li>
             <li>More <i class="fas fa-angle-double-right"></i> </li>
         </ul>
     </nav>
-    
+
     <header>
         <div>
             <div class="big-banner">
@@ -45,13 +47,13 @@
                     <label for="rooms">
                         <h1>Rooms</h1>
                     </label>
-                    <input type="number" value="3"  id="rooms" name="rooms" required/>
+                    <input type="number" value="3" id="rooms" name="rooms" required />
                 </div>
                 <div>
                     <label for="baths">
                         <h1>Baths</h1>
                     </label>
-                    <input type="number" value="2"  id="baths" name="baths" required/>
+                    <input type="number" value="2" id="baths" name="baths" required />
                 </div>
                 <div>
                     <button type="submit"><i class="fas fa-chevron-right"></i></button>
@@ -59,15 +61,68 @@
             </form>
         </div>
     </header>
-    <h1 id="title"></h1>
-    <script>
+    <section>
+        <h1 id="title"></h1>
+        <div id="search-result" class="search-section">
+
+        </div>
+    </section>
+    <footer>
+        <div>
+            <div class="subscribe">
+                <h1>List your home</h1>
+                <form>
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="social-media">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fas fa-rss"></i>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script type="module">
+        import { homes } from './homes.js'
+        let mapSearch = (r = 3, b = 2) => {
+            let container = document.getElementById('search-result');
+            homes.map((home, i) => {
+                let div = document.createElement('div')
+                div.innerHTML = `
+                    <div class="img-container">
+                        <img alt="${home.name}" src="${home.image}" />
+                    </div>
+                    <h1>${home.name}</h1>
+                    <p>${home.description}</p>
+                    <ul>
+                        <li>${r} bedrooms</li>
+                        <li>${b} bathrooms</li>
+                    </ul>
+                    <a href="${home.url}?index=${i}&r=${r}&b=${b}"><button type="submit">View house</button></a>
+                    `
+                container.appendChild(div)
+            })
+        }
         let url_string = window.location.href;
         let url = new URL(url_string);
         let l = url.searchParams.get("location");
         let r = url.searchParams.get("rooms");
         let b = url.searchParams.get("baths");
         let element = document.getElementById("title")
-        element.innerText = `Homes ${l ? "at " + l : ""} ${ b || r ? 'with' : ''} ${r ? r + ' rooms' : ''}  ${b ? `${r? 'and': ''} ${b} baths` : ''}`
+        element.innerText = `Homes ${l ? `at "${l}"` : ""} ${b || r ? 'with' : ''} ${r ? r + ' rooms' : ''}  ${b ? `${r ? 'and' : ''} ${b} baths` : ''}`
+        document.getElementById('location').value = l
+        document.getElementById('rooms').value = r
+        document.getElementById('baths').value = b
+        mapSearch(r, b)
     </script>
 </body>
 
