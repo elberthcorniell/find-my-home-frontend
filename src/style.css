@@ -1,0 +1,282 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+    transition-duration: 0.3s;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white
+}
+
+i {
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: #e3e5e7;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav ul li:last-child {
+    background-color: #c0d9f1;
+    border-radius: 5px;
+}
+
+nav i {
+    margin: 0 5px;
+}
+
+header > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header > div:first-child > div:last-child {
+    background-image: url(https://cdn.home-designing.com/wp-content/uploads/2018/02/Minimalist-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.big-banner {
+    background-color: #c0d9f1;
+    padding: 40px 40px 80px 80px;
+} 
+
+.big-banner h1 {
+    font-size: 80px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    margin: auto;
+    background-color: white;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.07);
+    padding: 20px;
+    animation-name: intro;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.search-box > form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr fit-content(50px);
+    column-gap: 20px;
+    align-items: flex-end;
+}
+
+input {
+    width: calc(100% - 20px);
+    height: 40px;
+    background-color: #e3e5e7;
+    border: none;
+    padding: 0 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: #555;
+    font-weight: bold;
+}
+
+button {
+    height: 40px;
+    border: none;
+    background-color: #333;
+    color: white;
+    width: 50px;
+}
+
+.search-box h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+section {
+    text-align: center;
+}
+
+.grid2-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 80px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid2-2 > div {
+    padding: 30px;
+    text-align: left;
+    border-radius: 5px;
+    position: relative;
+}
+
+.grid2-2 > div:hover {
+    background-color: #e3e5e7;
+    padding-top: 25px;
+}
+
+.grid2-2 > div:last-child {
+    background-color: #c0d9f1;
+}
+
+.grid2-2 h2 {
+    margin: 0;
+}
+
+.grid2-2 span {
+    color: #333;
+    font-weight: bold;
+}
+
+.grid2-2 p {
+    color: #555;
+}
+
+.grid2-2 i {
+    /* position: absolute; */
+    top: 30px;
+    right: 30px;
+    background-color: #e3e5e7;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.features {
+    margin-top: 40px;
+}
+
+.features > div {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 20px;
+    text-align: left;
+    padding: 40px;
+    align-items: center;
+}
+
+.features > div:nth-child(2n) {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 20px;
+    background-color: #c0d9f1;
+}
+
+.features img {
+    border-radius: 5px;
+    margin: 40px;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.15);
+    width: calc(100% - 80px);
+}
+
+.features button {
+    background-color: #333;
+    color: white;
+    border: none;
+    height: 40px;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+}
+
+footer > div {
+    padding: 40px;
+    color: white;
+}
+
+footer > div:last-child {
+    background-color: #333;
+}
+
+footer > div:first-child {
+    background-color: #c0d9f1;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media i {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    color: #333;
+}
+
+.social-media ul {
+    margin-top: 30px;
+    padding: 0;
+}
+  
+.social-media ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0 10px;
+    color: white;
+}
+
+.subscribe {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.subscribe form {
+    display: grid;
+    grid-template-columns: 1fr fit-content(50px);
+    column-gap: 10px;
+}
+
+.subscribe input {
+    background-color: white;
+}
+
+@keyframes intro {
+    0% {
+        transform: translateY(-10%);
+    }
+    
+    100% {
+        transform: translateY(-50%);
+    }
+}

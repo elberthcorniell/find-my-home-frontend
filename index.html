@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/58ae6287d2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Find My Home</title>
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h1>Find My Home</h1>
+        </div>
+        <ul>
+            <li>Homes</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>More <i class="fas fa-angle-double-right"></i> </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <div>
+                <div class="big-banner">
+                    <h1>Home rent made easy!</h1>
+                </div>
+                <div></div>
+            </div>
+            <div class="search-box">
+                <form action="./search.html" method="GET">
+                    <div>
+                        <label for="location">
+                            <h1>Location</h1>
+                        </label>
+                        <input type="text" id="location" name="location" />
+                    </div>
+                    <div>
+                        <label for="location">
+                            <h1>Rooms</h1>
+                        </label>
+                        <input type="number" value="3" />
+                    </div>
+                    <div>
+                        <label for="location">
+                            <h1>Baths</h1>
+                        </label>
+                        <input type="number" value="2" />
+                    </div>
+                    <div>
+                        <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <section>
+            <h1>We've upgraded the home rent experience.</h1>
+            <div class="grid2-2">
+                <div>
+                    <i class="fas fa-search"></i>
+                    <p>
+                        <span>Search</span> ipsum, dolor sit amet consectetur adipisicing elit. A, iusto magni
+                        aspernatur dolor.
+                    </p>
+                </div>
+                <div>
+                    <i class="fas fa-location-arrow"></i>
+                    <p>
+                        <span>Locate</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, iusto magni
+                        aspernatur dolor.
+                    </p>
+                </div>
+                <div>
+                    <i class="fas fa-check"></i>
+                    <p>
+                        <span>Apply</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, iusto magni
+                        aspernatur dolor.
+                    </p>
+                </div>
+                <div>
+                    <i class="fas fa-home"></i>
+                    <p>
+                        <span>Move</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, iusto magni
+                        aspernatur dolor.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div>
+                <div>
+                    <h1>Over 10,000 homes listed</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam, quos asperiores ut sed
+                        officiis. Tempora nobis, accusantium, quas nihil suscipit ratione corporis iure est, ex voluptas
+                        doloremque provident sit.
+                    </p>
+                    <button type="button" onclick="focusSearch()">Search</button>
+                </div>
+                <div>
+                    <img src="https://lh3.googleusercontent.com/proxy/0gsVkqMmQgCqRJTzrFnX1DiVr5nH0zsQe2UJ6gByZDgLiJm_muOPSy9h04mJLjow8lZz9SRPZSldn4SWNCMufsELcldZf5SgLcKK6sOxF2K-jvV3A2Ed7odqEPsP71XYE5vVs7MoThkuXdmEDcVhUny4"
+                        alt="A lot of homes" />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://images.thestar.com/QY-I8txAdAP832amSkhqap1lyH8=/1086x724/smart/filters:cb(2700061000)/https://www.thestar.com/content/dam/thestar/life/2017/08/17/minimalism-is-within-reach-for-families-with-children/miminalism.jpg"
+                        alt="Child at home" />
+                </div>
+                <div>
+                    <h1>Move in less than a week</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam, quos asperiores ut sed
+                        officiis. Tempora nobis, accusantium, quas nihil suscipit ratione corporis iure est, ex voluptas
+                        doloremque provident sit.
+                    </p>
+                    <button type="button" onclick="focusSearch()">Search</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h1>We are in charge of everything</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam, quos asperiores ut sed
+                        officiis. Tempora nobis, accusantium, quas nihil suscipit ratione corporis iure est, ex voluptas
+                        doloremque provident sit.
+                    </p>
+                    <button type="button" onclick="focusSearch()">Search</button>
+                </div>
+                <div>
+                    <img src="https://i2.wp.com/movingtips.wpengine.com/wp-content/uploads/2018/07/movers-carrying-boxes.jpg?fit=1024%2C684&ssl=1"
+                        alt="Moving services" />
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <div class="subscribe">
+                    <h1>List your home</h1>
+                    <form>
+                        <input type="email" placeholder="Email Address">
+                        <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-media">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fas fa-rss"></i>
+                <ul>
+                    <li>Homes</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Jobs</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script>
+        let focusSearch = () => {
+            let element = document.getElementById('location')
+            element.focus()
+        }
+    </script>
+</body>
+
+</html>
