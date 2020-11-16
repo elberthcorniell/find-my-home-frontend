@@ -16,12 +16,13 @@ i {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: #d4574a;
     align-items: center;
     padding: 0 20px;
     position: sticky;
@@ -29,6 +30,10 @@ nav {
     z-index: 999;
     white-space: nowrap;
     overflow-x: hidden;
+}
+
+nav h1 {
+    color: white;
 }
 
 nav:hover {
@@ -40,6 +45,7 @@ nav ul li {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
+    color: white !important;
 }
 
 nav ul li:hover {
