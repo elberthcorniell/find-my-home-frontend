@@ -62,7 +62,7 @@ nav ul li:last-child {
 
 nav i {
     margin: 0 5px;
-    color: white;
+    color: #d4574a;
 }
 
 nav .burger {
@@ -87,7 +87,7 @@ header > div:first-child > div:last-child img {
 }
 
 .big-banner {
-    background-color: #c0d9f1;
+    background-color: #e3e5e7;
     padding: 40px 40px 80px 80px;
 } 
 
@@ -231,21 +231,21 @@ section button {
     width: fit-content;
 }
 
+footer h2 {
+    color: white;
+}
+
 footer > div {
     padding: 40px;
     color: white;
 }
 
-footer > div:nth-child(2) {
+footer > div:first-child {
     background-color: #000000;
 }
 
 footer > div:last-child {
     background-color: #000000;
-}
-
-footer > div:first-child {
-    background-color: white;
 }
 
 .social-media, .footer-links {
@@ -266,8 +266,15 @@ footer > div:first-child {
 }
 
 .footer-links ul {
+    display: flex;
     margin-top: 30px;
     padding: 0;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 30px;
 }
   
 .footer-links ul li {
@@ -276,6 +283,18 @@ footer > div:first-child {
     font-size: 14px;
     padding: 0 10px;
     color: white;
+}
+
+.footer-links ul li i {
+    font-size: 40px;
+    margin: 0 20px;
+    padding: 20px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 999;
 }
 
 .subscribe {
@@ -320,6 +339,19 @@ footer > div:first-child {
 
 .search-section button {
     background-color: #d4574a;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3 p {
+    color: white;
+}
+
+.grid-3 > div {
+    padding: 30px 40px;
 }
 
 .img-container {
@@ -401,6 +433,10 @@ footer a {
     .home-details {
         grid-template-columns: 1fr;
         margin: 20px;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 
 }
