@@ -405,6 +405,12 @@ footer a {
         padding: 40px;
     }
 
+    .big-banner h1 {
+        font-size: 48px;
+        line-height: 50px;
+        margin-bottom: 80px;
+    }
+
     .search-section {
         grid-template-columns: 1fr;
     }
