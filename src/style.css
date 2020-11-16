@@ -45,7 +45,7 @@ nav ul li {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    color: white !important;
+    color: white;
 }
 
 nav ul li:hover {
@@ -55,12 +55,14 @@ nav ul li:hover {
 }
 
 nav ul li:last-child {
-    background-color: #c0d9f1;
+    background-color: white;
     border-radius: 5px;
+    color: #d4574a ;
 }
 
 nav i {
     margin: 0 5px;
+    color: white;
 }
 
 nav .burger {
@@ -133,7 +135,7 @@ input::placeholder {
 button {
     height: 40px;
     border: none;
-    background-color: #333;
+    background-color: #d4574a;
     color: white;
     width: 50px;
 }
@@ -170,7 +172,11 @@ section {
 }
 
 .grid2-2 > div:last-child {
-    background-color: #c0d9f1;
+    background-color: #d4574a;
+}
+
+.grid2-2 > div:last-child > p {
+    color: white;
 }
 
 .grid2-2 h2 {
@@ -207,13 +213,6 @@ section {
     align-items: center;
 }
 
-.features > div:nth-child(2n) {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    column-gap: 20px;
-    background-color: #c0d9f1;
-}
-
 .features img {
     border-radius: 5px;
     margin: 40px;
@@ -222,7 +221,7 @@ section {
 }
 
 section button {
-    background-color: #333;
+    background-color: white;
     color: white;
     border: none;
     height: 40px;
@@ -242,7 +241,7 @@ footer > div:last-child {
 }
 
 footer > div:first-child {
-    background-color: #c0d9f1;
+    background-color: white;
 }
 
 .social-media {
@@ -287,10 +286,6 @@ footer > div:first-child {
     column-gap: 10px;
 }
 
-.subscribe input {
-    background-color: white;
-}
-
 .search-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -317,6 +312,10 @@ footer > div:first-child {
 
 .search-section img {
     width: 100%;
+}
+
+.search-section button {
+    background-color: #d4574a;
 }
 
 .img-container {
@@ -361,6 +360,34 @@ footer a {
     background-color: #e3e5e7;
 }
 
+.features > div:nth-child(1) {
+    background-color: #d4574a;
+}
+
+.features > div:nth-child(1) > div > button {
+    color: #d4574a;
+}
+
+.features > div:nth-child(2) {
+    background-color: #99a4a5;
+}
+
+.features > div:nth-child(2) > div > button {
+    color: #99a4a5;
+}
+
+.features > div:nth-child(3) {
+    background-color: #519cd8;
+}
+
+.features > div:nth-child(3) > div > button {
+    color: #519cd8;
+}
+
+.features > div > div > p ,.features > div > div > h3 {
+    color: white;
+}
+
 @media screen and (max-width: 1024px) {
 
     .search-section {
@@ -380,10 +407,6 @@ footer a {
     }
 
     .features > div {
-        grid-template-columns: 1fr;
-    }
-
-    .features > div:nth-child(2n) {
         grid-template-columns: 1fr;
     }
 
