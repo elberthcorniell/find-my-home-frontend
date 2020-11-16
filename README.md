@@ -46,6 +46,10 @@ git clone https://github.com/elberthcorniell/find-my-home-frontend.git
 - Twitter: [@elberthcorniell](https://twitter.com/elberthcorniell)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elbert-corniell-989183159/)
 
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- [Mathew Njuguna and others on Behance](https://www.behance.net/gallery/25563385/PatashuleKE)
 
 ## 🤝 Contributing
 

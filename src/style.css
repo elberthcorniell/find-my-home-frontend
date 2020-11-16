@@ -32,7 +32,7 @@ nav {
     overflow-x: hidden;
 }
 
-nav h1 {
+nav h2 {
     color: white;
 }
 
@@ -236,15 +236,19 @@ footer > div {
     color: white;
 }
 
+footer > div:nth-child(2) {
+    background-color: #000000;
+}
+
 footer > div:last-child {
-    background-color: #333;
+    background-color: #000000;
 }
 
 footer > div:first-child {
     background-color: white;
 }
 
-.social-media {
+.social-media, .footer-links {
     text-align: center;
 }
 
@@ -256,17 +260,17 @@ footer > div:first-child {
     margin: 0 10px;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: #333;
     border-radius: 50%;
-    color: #333;
+    color: #555;
 }
 
-.social-media ul {
+.footer-links ul {
     margin-top: 30px;
     padding: 0;
 }
   
-.social-media ul li {
+.footer-links ul li {
     display: inline-block;
     text-transform: uppercase;
     font-size: 14px;
